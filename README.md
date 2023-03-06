@@ -17,11 +17,11 @@ ___
 <img width src="src/../Gif/2-Instalando_Docker.gif">
 </p>
 
-`curl -fsSL [https://get.docker.com](https://get.docker.com/) -o get-docker.sh](http://get-docker.sh/)` -> download do docker.
+`curl -fsSL [https://get.docker.com](https://get.docker.com/) -o get-docker.sh](http://get-docker.sh/)` > download do docker.
 
-`sudo sh [get-docker.sh](http://get-docker.sh/)` -> iniciando instalação.
+`sudo sh [get-docker.sh](http://get-docker.sh/)` > iniciando instalação.
 
-`systemctl status doker` -> verificando se docker realmente está ativo.
+`systemctl status doker` > verificando se docker realmente está ativo.
 ___
 
 #### Criando volumes:
@@ -34,10 +34,13 @@ ___
 
 `docker volume create data`
 
-`docker run -e MYSQL_ROOT_PASSWORD=Senha123 -e MYSQL_DATABASE=meubanco --name mysql-A -d -p 3306:3306 --mount type=volume,src=data,dst=/var/lib/mysql/ mysql:5.7` -> criar e executar novo contêiner Docker com base em uma imagem especificada mysql:5.7
+`docker run -e MYSQL_ROOT_PASSWORD=Senha123 -e MYSQL_DATABASE=meubanco --name mysql-A -d -p 3306:3306 --mount type=volume,src=data,dst=/var/lib/mysql/ mysql:5.7` > criar e executar novo contêiner Docker com base em uma imagem especificada mysql:5.7
 
-Detalhes do comando:
-|Comando | o que faz                                                                        |
+<div style="background-color:yellow">
+  <p style="color:blue">Detalhando o comando</p>
+</div>
+
+|Partes do comando | o que faz                                                                        |
 |--------|----------------------------------------------------------------------------------|
 |`-e MYSQL_ROOT_PASSWORD=Senha123`| define a senha de root do MySQL para "Senha123" como uma variável de ambiente dentro do contêiner |
 |`-e MYSQL_DATABASE=meubanco`     | cria um banco de dados chamado "meubanco" como uma variável de ambiente dentro do contêiner      |
@@ -51,3 +54,7 @@ Detalhes do comando:
 ___
 
 ####
+
+
+
+
