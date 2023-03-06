@@ -5,7 +5,7 @@
 
 
 #### Iniciando a VM via SSH :
-![Criando Volumes](/Gif/2-Instalando_Docker.gif)
+![Criando Volumes](/Gif/1-Iniciando_Virtual%20Machine_via_SSH.gif)
 ```shell
 ssh -i <chave ssh> <username>@<ip_público>
 ```
@@ -15,15 +15,18 @@ ___
 #### Instalando docker:
 ![Instalando docker](/Gif/2-Instalando_Docker.gif)
 
+download do docker:
 ```shell
 curl -fsSL [https://get.docker.com](https://get.docker.com/) -o get-docker.sh](http://get-docker.sh/)
 ```
-Download do docker
-
-
-`sudo sh [get-docker.sh](http://get-docker.sh/)` > iniciando instalação.
-
-`systemctl status doker` > verificando se docker realmente está ativo.
+ iniciando instalação:
+```shell
+sudo sh [get-docker.sh](http://get-docker.sh/)
+```
+ verificando se docker realmente está ativo:
+```shell
+systemctl status doker
+```
 ___
 
 #### Criando volumes:
