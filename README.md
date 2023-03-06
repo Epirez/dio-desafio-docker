@@ -6,17 +6,11 @@
 
 #### Iniciando a VM via SSH :
 ![Criando Volumes](/Gif/2-Instalando_Docker.gif)
-<p align="center">
-<img width="1080" src="src/../Gif/1-Iniciando_Virtual%20Machine_via_SSH.gif">
-</p>
-
 `ssh -i <chave ssh> <username>@<ip_público>`
 ___
 
 #### Instalando docker:
 ![Instalando docker](/Gif/2-Instalando_Docker.gif)
-
-
 `curl -fsSL [https://get.docker.com](https://get.docker.com/) -o get-docker.sh](http://get-docker.sh/)` > download do docker.
 
 `sudo sh [get-docker.sh](http://get-docker.sh/)` > iniciando instalação.
@@ -26,8 +20,7 @@ ___
 
 #### Criando volumes:
 ![Criando volumes](/Gif/3-Criando%20volumes.gif)
-
-<p>A principal função do volume é persistir os dados. Diferentemente do filesystem do container, que é volátil e toda informação escrita nele é perdida quando o container morre, quando você escreve em um volume aquele dado continua lá, independentemente do estado do container.<br>
+A principal função do volume é persistir os dados. Diferentemente do filesystem do container, que é volátil e toda informação escrita nele é perdida quando o container morre, quando você escreve em um volume aquele dado continua lá, independentemente do estado do container.
 
 `docker volume create app`
 
