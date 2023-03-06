@@ -51,5 +51,20 @@ ___
 
 #### Testando a conexão com banco de dados:
 ![Testando a conexão com banco de dados](/Gif/5%20-%20Teste%20conexão%20com%20banco%20de%20dados.gif)
+Utilizadndo cliente SQL Sequeler para conectar ao banco de dados remoto.
+___
 
+#### Criando tabela no sequele:
+![Criando tabela no sequele](/Gif/6%20-%20Criando%20tabela%20no%20sequele.gif)
+```sql
+CREATE TABLE dados (
+    AlunoID int,
+    Nome varchar(50),
+    Sobrenome varchar(50),
+    Endereco varchar(150),
+    Cidade varchar(50),
+    Host varchar(50)
+);
+``
+___
 
