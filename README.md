@@ -6,12 +6,20 @@
 
 #### Iniciando a VM via SSH :
 ![Criando Volumes](/Gif/2-Instalando_Docker.gif)
-`ssh -i <chave ssh> <username>@<ip_público>`
+```shell
+ssh -i <chave ssh> <username>@<ip_público>
+```
+
 ___
 
 #### Instalando docker:
 ![Instalando docker](/Gif/2-Instalando_Docker.gif)
-`curl -fsSL [https://get.docker.com](https://get.docker.com/) -o get-docker.sh](http://get-docker.sh/)` > download do docker.
+
+```shell
+curl -fsSL [https://get.docker.com](https://get.docker.com/) -o get-docker.sh](http://get-docker.sh/)
+```
+Download do docker
+
 
 `sudo sh [get-docker.sh](http://get-docker.sh/)` > iniciando instalação.
 
@@ -46,7 +54,7 @@ ___
 |`--mount type=volume,src=data,dst=/var/lib/mysql/`| cria um volume chamado "data" e o monta no diretório "/var/lib/mysql/" dentro do container, permitindo que os dados do banco de dados sejam armazenados persistentemente fora do container |
 |`mysql:5.7`| especifica a imagem do Docker usada para criar o container, nesse caso, a imagem do MySQL versão 5.7.
 
-`docker ps` > listar os containers em execução no momento no Docker host. 
+`docker ps` > listar os containers em execução no momento no Docker host.
 ___
 
 #### Testando a conexão com banco de dados:
@@ -65,6 +73,6 @@ CREATE TABLE dados (
     Cidade varchar(50),
     Host varchar(50)
 );
-``
-___
+```
 
+___
