@@ -37,13 +37,15 @@ ___
 `docker run -e MYSQL_ROOT_PASSWORD=Senha123 -e MYSQL_DATABASE=meubanco --name mysql-A -d -p 3306:3306 --mount type=volume,src=data,dst=/var/lib/mysql/ mysql:5.7` -> criar e executar novo contêiner Docker com base em uma imagem especificada mysql:5.7
 
 Detalhes do comando:
-`-e MYSQL_ROOT_PASSWORD=Senha123` define a senha de root do MySQL para "Senha123" como uma variável de ambiente dentro do contêiner;
-`-e MYSQL_DATABASE=meubanco` cria um banco de dados chamado "meubanco" como uma variável de ambiente dentro do contêiner;
-`--name mysql-A` : define o nome do contêiner como "mysql-A";
-`-d` : executa o contêiner em segundo plano (modo "detached");
-"-p 3306:3306": mapeia a porta 3306 do contêiner para a porta 3306 do host, permitindo que aplicativos externos se comuniquem com o MySQL dentro do contêiner;
-"--mount type=volume,src=data,dst=/var/lib/mysql/": cria um volume chamado "data" e o monta no diretório "/var/lib/mysql/" dentro do contêiner, permitindo que os dados do banco de dados sejam armazenados persistentemente fora do contêiner;
-"mysql:5.7": especifica a imagem do Docker usada para criar o contêiner, nesse caso, a imagem do MySQL versão 5.7.
+|Comando | o que faz                                                                        |
+|--------|----------------------------------------------------------------------------------|
+|`-e MYSQL_ROOT_PASSWORD=Senha123`| define a senha de root do MySQL para "Senha123" como uma variável de ambiente dentro do contêiner |
+|`-e MYSQL_DATABASE=meubanco`     | cria um banco de dados chamado "meubanco" como uma variável de ambiente dentro do contêiner      |
+|`--name mysql-A`                 | define o nome do contêiner como "mysql-A"
+|`-d`                             | executa o contêiner em segundo plano (modo "detached")
+|`-p 3306:3306`                   | mapeia a porta 3306 do contêiner para a porta 3306 do host, permitindo que aplicativos externos se comuniquem com o MySQL dentro do contêiner|
+|`--mount type=volume,src=data,dst=/var/lib/mysql/`| cria um volume chamado "data" e o monta no diretório "/var/lib/mysql/" dentro do contêiner, permitindo que os dados do banco de dados sejam armazenados persistentemente fora do contêiner |
+|`mysql:5.7`| especifica a imagem do Docker usada para criar o contêiner, nesse caso, a imagem do MySQL versão 5.7.
 
 `docker ps`
 ___
