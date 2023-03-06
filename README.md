@@ -5,6 +5,7 @@
 
 
 #### Iniciando a VM via SSH :
+![Criando Volumes](/Gif/2-Instalando_Docker.gif)
 <p align="center">
 <img width="1080" src="src/../Gif/1-Iniciando_Virtual%20Machine_via_SSH.gif">
 </p>
@@ -13,9 +14,8 @@
 ___
 
 #### Instalando docker:
-<p align="center">
-<img width src="src/../Gif/2-Instalando_Docker.gif">
-</p>
+![Instalando docker](/Gif/2-Instalando_Docker.gif)
+
 
 `curl -fsSL [https://get.docker.com](https://get.docker.com/) -o get-docker.sh](http://get-docker.sh/)` > download do docker.
 
@@ -25,16 +25,19 @@ ___
 ___
 
 #### Criando volumes:
-<p align="center">
-<img width src="src/../Gif/3-Criando%20volumes.gif">
-</p>
+![Criando volumes](/Gif/3-Criando%20volumes.gif)
+
 <p>A principal função do volume é persistir os dados. Diferentemente do filesystem do container, que é volátil e toda informação escrita nele é perdida quando o container morre, quando você escreve em um volume aquele dado continua lá, independentemente do estado do container.<br>
 
 `docker volume create app`
 
 `docker volume create data`
+___
 
-`docker run -e MYSQL_ROOT_PASSWORD=Senha123 -e MYSQL_DATABASE=meubanco --name mysql-A -d -p 3306:3306 --mount type=volume,src=data,dst=/var/lib/mysql/ mysql:5.7` > criar e executar novo contêiner Docker com base em uma imagem especificada mysql:5.7
+####  Criar e Executar novo container:
+![Criar e Executar novo container](/Gif/4%20-%20%20Criar%20e%20Executar%20novo%20contêiner.gif)
+
+`docker run -e MYSQL_ROOT_PASSWORD=Senha123 -e MYSQL_DATABASE=meubanco --name mysql-A -d -p 3306:3306 --mount type=volume,src=data,dst=/var/lib/mysql/ mysql:5.7` > criar e executar novo container Docker com base em uma imagem especificada mysql:5.7
 
 <div style="background-color:yellow">
   <p style="color:blue">Detalhando o comando</p>
@@ -42,20 +45,18 @@ ___
 
 |Partes do comando | o que faz                                                                        |
 |--------|----------------------------------------------------------------------------------|
-|`-e MYSQL_ROOT_PASSWORD=Senha123`| define a senha de root do MySQL para "Senha123" como uma variável de ambiente dentro do contêiner |
-|`-e MYSQL_DATABASE=meubanco`     | cria um banco de dados chamado "meubanco" como uma variável de ambiente dentro do contêiner      |
-|`--name mysql-A`                 | define o nome do contêiner como "mysql-A"
-|`-d`                             | executa o contêiner em segundo plano (modo "detached")
-|`-p 3306:3306`                   | mapeia a porta 3306 do contêiner para a porta 3306 do host, permitindo que aplicativos externos se comuniquem com o MySQL dentro do contêiner|
-|`--mount type=volume,src=data,dst=/var/lib/mysql/`| cria um volume chamado "data" e o monta no diretório "/var/lib/mysql/" dentro do contêiner, permitindo que os dados do banco de dados sejam armazenados persistentemente fora do contêiner |
-|`mysql:5.7`| especifica a imagem do Docker usada para criar o contêiner, nesse caso, a imagem do MySQL versão 5.7.
+|`-e MYSQL_ROOT_PASSWORD=Senha123`| define a senha de root do MySQL para "Senha123" como uma variável de ambiente dentro do container |
+|`-e MYSQL_DATABASE=meubanco`     | cria um banco de dados chamado "meubanco" como uma variável de ambiente dentro do container      |
+|`--name mysql-A`                 | define o nome do container como "mysql-A"
+|`-d`                             | executa o container em segundo plano (modo "detached")
+|`-p 3306:3306`                   | mapeia a porta 3306 do container para a porta 3306 do host, permitindo que aplicativos externos se comuniquem com o MySQL dentro do container|
+|`--mount type=volume,src=data,dst=/var/lib/mysql/`| cria um volume chamado "data" e o monta no diretório "/var/lib/mysql/" dentro do container, permitindo que os dados do banco de dados sejam armazenados persistentemente fora do container |
+|`mysql:5.7`| especifica a imagem do Docker usada para criar o container, nesse caso, a imagem do MySQL versão 5.7.
 
-`docker ps`
+`docker ps` > listar os containers em execução no momento no Docker host. 
 ___
 
-####
+#### Testando a conexão com banco de dados:
+![Testando a conexão com banco de dados](/Gif/5%20-%20Teste%20conexão%20com%20banco%20de%20dados.gif)
 
 
-
-
-![Criando Volumes](/Gif/3-Criando%20volumes.gif)
