@@ -19,10 +19,12 @@ download do docker:
 ```shell
 curl -fsSL [https://get.docker.com](https://get.docker.com/) -o get-docker.sh](http://get-docker.sh/)
 ```
+
  iniciando instalação:
 ```shell
 sudo sh [get-docker.sh](http://get-docker.sh/)
 ```
+
  verificando se docker realmente está ativo:
 ```shell
 systemctl status doker
@@ -33,15 +35,22 @@ ___
 ![Criando volumes](/Gif/3-Criando%20volumes.gif)
 A principal função do volume é persistir os dados. Diferentemente do filesystem do container, que é volátil e toda informação escrita nele é perdida quando o container morre, quando você escreve em um volume aquele dado continua lá, independentemente do estado do container.
 
-`docker volume create app`
+```shell
+docker volume create app
+```
 
-`docker volume create data`
+```shell
+docker volume create data
+```
 ___
 
 ####  Criar e Executar novo container:
 ![Criar e Executar novo container](/Gif/4%20-%20%20Criar%20e%20Executar%20novo%20contêiner.gif)
 
-`docker run -e MYSQL_ROOT_PASSWORD=Senha123 -e MYSQL_DATABASE=meubanco --name mysql-A -d -p 3306:3306 --mount type=volume,src=data,dst=/var/lib/mysql/ mysql:5.7` > criar e executar novo container Docker com base em uma imagem especificada mysql:5.7
+criar e executar novo container Docker com base em uma imagem especificada mysql:5.7:
+```shell
+docker run -e MYSQL_ROOT_PASSWORD=Senha123 -e MYSQL_DATABASE=meubanco --name mysql-A -d -p 3306:3306 --mount type=volume,src=data,dst=/var/lib/mysql/ mysql:5.7
+```
 
 <div style="background-color:yellow">
   <p style="color:blue">Detalhando o comando</p>
@@ -57,7 +66,10 @@ ___
 |`--mount type=volume,src=data,dst=/var/lib/mysql/`| cria um volume chamado "data" e o monta no diretório "/var/lib/mysql/" dentro do container, permitindo que os dados do banco de dados sejam armazenados persistentemente fora do container |
 |`mysql:5.7`| especifica a imagem do Docker usada para criar o container, nesse caso, a imagem do MySQL versão 5.7.
 
-`docker ps` > listar os containers em execução no momento no Docker host.
+listar os containers em execução no momento no Docker host:
+```shell
+docker ps
+```
 ___
 
 #### Testando a conexão com banco de dados:
@@ -67,6 +79,7 @@ ___
 
 #### Criando tabela no sequele:
 ![Criando tabela no sequele](/Gif/6%20-%20Criando%20tabela%20no%20sequele.gif)
+
 ```sql
 CREATE TABLE dados (
     AlunoID int,
