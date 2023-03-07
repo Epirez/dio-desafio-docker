@@ -3,6 +3,17 @@
 ## Replicando na prática a tecnologia de containers ministrado pelo instrutor Denilson Bonatti, dentro do Bootcamp Linux do zero :penguin:
 <p> <br>
 
+Este projeto se baseia em uma situação hipotética em que  além do hipermercado que o dono tem, quer construir mais unidades na cidade, sua atual infraestrutura no hipermercado 1 onde responde as requisições feitas nos dispositivos dos caixas eletrônicos, porém deve ser tomar cuidado com o custo, equipamentos necessários para implementação dos demais data center pode ter altos custos. Então precisa-se analisar se o modelo atual é viável, poderia manter em um hipermercado um Data Center grande que consequentemente iria precisar de mais servidores, de uma VPN (link privado entre os hipermercados), entre outros. 
+
+|**Problemas com a nuvem privada no data center local**| **Vantagens de migrar para a nuvem pública**                                    |
+|-------------------------------------------------------|-----------------------------------------|
+|- Dificuldade com a segurança e tecnologia da informação (lógica e física).| Preço (pague somente o que usar).|
+|- Custo com a mão de obra especializada.|Facilidade de contratação, configuração e infraestrutura (vários players no mercado como: AWS, GCP, Microsoft Azure, Oracle…)|
+|- Custo de Hardware.
+|- Custo de Energia elétrica.| Escalabilidade (pode subir e descer várias máquinas facilmente).|
+|- Falta de Energia com hipótese de uso de geradores.| Performance (Ainda mais se tiver uma boa internet).|
+|- Despesas inesperada.|
+<p><br>
 
 #### Iniciando a VM via SSH :
 ![Criando Volumes](/Gif/1-Iniciando_Virtual%20Machine_via_SSH.gif)
@@ -91,6 +102,7 @@ CREATE TABLE dados (
     Host varchar(50)
 );
 ```
+*aqui poderia colocar os campos como se fossem uma tabela de producos de supermercado.
 
 ***
 
@@ -349,7 +361,7 @@ nano nginx.conf
 Na configuração do arquivo nginx.conf coloquei `upstream ll` o correto é `upstream all`, no arquivo disponibilizado neste repositório esta correto, só alterar os IP conforme os do seus servidores remoto.
 
 ***
-#### 27 - Criando arquivo chamado dockerfile:
+#### Criando arquivo chamado dockerfile:
 ![Criar arquivo chamado dockerfile](/Gif/27%20-%20Criar%20arquivo%20chamado%20dockerfile.gif)
 FROM indica qual a imagem que vai usar, neste caso nginx, vai buscar no hub do docker o ngnix, depois que fazer o downlaod no computador ele vai pegar esse arquivo de configuração nginx.conf e vai mandar pra dentro do contêiner, dessa forma ele já vai configurando conforme os parâmetros indicados nessa configuração.:
 
