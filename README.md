@@ -7,12 +7,12 @@ Este projeto se baseia em uma situação hipotética em que  além do hipermerca
 
 |**Problemas com a nuvem privada no data center local**| **Vantagens de migrar para a nuvem pública**                                    |
 |-------------------------------------------------------|-----------------------------------------|
-|- Dificuldade com a segurança e tecnologia da informação (lógica e física).| Preço (pague somente o que usar).|
-|- Custo com a mão de obra especializada.|Facilidade de contratação, configuração e infraestrutura (vários players no mercado como: AWS, GCP, Microsoft Azure, Oracle…)|
-|- Custo de Hardware.
-|- Custo de Energia elétrica.| Escalabilidade (pode subir e descer várias máquinas facilmente).|
-|- Falta de Energia com hipótese de uso de geradores.| Performance (Ainda mais se tiver uma boa internet).|
-|- Despesas inesperada.|
+| Dificuldade com a segurança e tecnologia da informação (lógica e física).| Preço (pague somente o que usar).|
+| Custo com a mão de obra especializada.|Facilidade de contratação, configuração e infraestrutura (vários players no mercado como: AWS, GCP, Microsoft Azure, Oracle…)|
+| Custo de Hardware.
+| Custo de Energia elétrica.| Escalabilidade (pode subir e descer várias máquinas facilmente).|
+| Falta de Energia com hipótese de uso de geradores.| Performance (Ainda mais se tiver uma boa internet).|
+| Despesas inesperada.|
 <p><br>
 
 #### Iniciando a VM via SSH :
