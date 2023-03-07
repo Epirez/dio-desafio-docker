@@ -3,7 +3,7 @@
 ## Replicando na prática a tecnologia de containers ministrado pelo instrutor Denilson Bonatti, dentro do Bootcamp Linux do zero :penguin:
 <p> <br>
 
-Este projeto se baseia em uma situação hipotética em que  além do hipermercado que o dono tem, quer construir mais unidades na cidade, sua atual infraestrutura no hipermercado 1 onde responde as requisições feitas nos dispositivos dos caixas eletrônicos, porém deve ser tomar cuidado com o custo, equipamentos necessários para implementação dos demais data center pode ter altos custos. Então precisa-se analisar se o modelo atual é viável, poderia manter em um hipermercado um Data Center grande que consequentemente iria precisar de mais servidores, de uma VPN (link privado entre os hipermercados), entre outros. 
+Este projeto se baseia em uma situação hipotética em que  além do hipermercado que o dono tem, quer construir mais unidades na cidade, sua atual infraestrutura no hipermercado 1 onde responde as requisições feitas nos dispositivos dos caixas eletrônicos, antes de qualquer coisa deve ser tomar cuidado com o custo, como equipamentos necessários para implementação dos demais data center pode ter altos custos. Então precisa-se analisar se o modelo atual é viável, poderia manter em um hipermercado um Data Center grande que consequentemente iria precisar de mais servidores, de uma VPN (link privado entre os hipermercados), entre outros. 
 
 |**Problemas com a nuvem privada no data center local**| **Vantagens de migrar para a nuvem pública**                                    |
 |-------------------------------------------------------|-----------------------------------------|
