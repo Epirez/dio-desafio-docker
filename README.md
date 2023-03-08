@@ -3,16 +3,16 @@
 ## Replicando na prática a tecnologia de containers ministrado pelo instrutor Denilson Bonatti, dentro do Bootcamp Linux do zero :penguin:
 <p> <br>
 
-Este projeto se baseia em uma situação hipotética em que  além do hipermercado que o dono tem, quer construir mais unidades na cidade, sua atual infraestrutura no hipermercado 1 onde responde as requisições feitas nos dispositivos dos caixas eletrônicos, antes de qualquer coisa deve ser tomar cuidado com o custo, como equipamentos necessários para implementação dos demais data center pode ter altos custos. Então precisa-se analisar se o modelo atual é viável, poderia manter em um hipermercado um Data Center grande que consequentemente iria precisar de mais servidores, de uma VPN (link privado entre os hipermercados), entre outros. 
+Este projeto pressupõe uma situação hipotética em que o dono de um hipermercado deseja expandir sua empresa construindo novas unidades na cidade. Contudo, antes de qualquer coisa, é importante considerar os custos envolvidos na implementação de novos Data Centers, pois os equipamentos necessários podem ser bastante caros. Portanto, é preciso avaliar se o modelo atual é viável, mantendo um grande Data Center no hipermercado principal, que seria responsável por atender às solicitações dos caixas eletrônicos e também de outras unidades, caso sejam construídas. Essa opção exigiria mais servidores e uma VPN para conectar os diferentes hipermercados.
 
-|**Problemas com a nuvem privada no data center local**| **Vantagens de migrar para a nuvem pública**                                    |
+|**Problemas com a nuvem privada Data Center local**| **Vantagens de migrar para a nuvem pública**|
 |-------------------------------------------------------|-----------------------------------------|
 | Dificuldade com a segurança e tecnologia da informação (lógica e física).| Preço (pague somente o que usar).|
 | Custo com a mão de obra especializada.|Facilidade de contratação, configuração e infraestrutura (vários players no mercado como: AWS, GCP, Microsoft Azure, Oracle…)|
-| Custo de Hardware.
-| Custo de Energia elétrica.| Escalabilidade (pode subir e descer várias máquinas facilmente).|
-| Falta de Energia com hipótese de uso de geradores.| Performance (Ainda mais se tiver uma boa internet).|
-| Despesas inesperada.|
+| Custo de Hardware. | Escalabilidade (pode subir e descer várias máquinas facilmente).|
+| Custo de Energia elétrica.| Performance (Ainda mais se tiver uma boa internet).|
+| Falta de Energia com hipótese de uso de geradores.| 
+| Despesas inesperadas.|
 <p><br>
 
 #### Iniciando a VM via SSH :
