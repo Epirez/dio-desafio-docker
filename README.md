@@ -102,7 +102,7 @@ CREATE TABLE dados (
     Host varchar(50)
 );
 ```
-*aqui poderia colocar os campos como se fossem uma tabela de producos de supermercado.
+*aqui poderia colocar os campos como se fossem uma tabela de produtos de supermercado.
 
 ***
 
